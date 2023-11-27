@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="formularioRegistro" (ngSubmit)="registrarUsuario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" formControlName="nombre" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" formControlName="correo" required>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" formControlName="password" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" formControlName="telefono" required>
+
+        <label for="discapacidad">Discapacidad:</label>
+        <select id="discapacidad" name="discapacidad" formControlName="discapacidad" required>
+            <option value="ninguna">Ninguna</option>
+            <option value="visual">Visual</option>
+            <option value="auditiva">Auditiva</option>
+            <option value="motora">Motora</option>
+        </select>
+
+        <label for="curriculum">Curriculum Vitae:</label>
+        <input type="file" id="curriculum" name="curriculum" formControlName="curriculum" accept=".pdf,.doc,.docx" required>
+        
+        <button type="submit" [disabled]="!formularioRegistro.valid">Registrar</button>
+    </form>
+</div>

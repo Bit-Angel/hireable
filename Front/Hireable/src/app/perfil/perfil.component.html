@@ -1,0 +1,12 @@
+<div class="user-profile">
+    <h2>Perfil de Usuario</h2>
+    <div>
+      <p><strong>Nombre:</strong> {{ usuarioAutenticado?.nombre }}</p>
+      <p><strong>Correo Electrónico:</strong> {{ usuarioAutenticado?.correo }}</p>
+      <p><strong>Telefono:</strong> {{ usuarioAutenticado?.telefono }}</p>
+      <p><strong>Discapacidad:</strong> {{ usuarioAutenticado?.discapacidad }}</p>
+      <!-- Agrega más campos según la estructura de tu usuario -->
+    </div>
+    <button (click)="logout()">Cerrar Sesión</button>
+  </div>
+  

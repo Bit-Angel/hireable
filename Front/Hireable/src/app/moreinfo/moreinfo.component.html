@@ -1,0 +1,15 @@
+<div class="job-details" *ngIf="job">
+    <div class="job-header">
+      <img [src]="job.image" alt="Job Image" class="job-image">
+      <button class="apply-button" (click)="applyToJob()" [disabled]="disableApplyButton">Aplicar a esta Vacante</button>
+    <button class="back-button" (click)="goBack()">Volver</button>
+    </div>
+    <div class="job-info">
+        <h1 class="title">{{ job.position }}</h1>
+      <p class="empresa">{{ job.company }}</p>
+      <p><strong>Salario:</strong> {{ job.salary }}</p>
+      <p><strong>Categoría:</strong> {{ job.category }}</p>
+      <p><strong>Descripcion:</strong><br> {{ job.descripcion }}</p>
+      <!-- Otros detalles del trabajo -->
+    </div>
+</div>

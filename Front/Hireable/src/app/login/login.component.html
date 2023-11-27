@@ -1,0 +1,11 @@
+<div class="container">
+    <form [formGroup]="formularioLogin" (ngSubmit)="iniciarSesion()">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" formControlName="correo" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" formControlName="password" required>
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+</div>

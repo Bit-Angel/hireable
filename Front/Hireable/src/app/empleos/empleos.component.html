@@ -1,0 +1,22 @@
+<div class="title-container">
+    <h1 class="gray-title">Encuentra tu empleo</h1>
+    <h1 class="blue-title">Perfecto</h1>
+  </div>
+  <div class="filter-container">
+    <select id="capabilityFilter" [(ngModel)]="selectedCapability" (change)="filterByCapability()">
+      <option value="">Todas</option>
+      <option *ngFor="let capability of uniqueCapabilities" [value]="capability">{{ capability }}</option>
+    </select>
+  </div>
+  <div class="card-container">
+    <div class="card" *ngFor="let job of filteredJobList">
+      <img [src]="job.image" class="card-img-top" alt="Job Image">
+      <div class="card-body">
+        <h5 class="card-title">{{ job.position }}</h5>
+        <p class="card-texts">{{ job.company }}</p>
+        <p class="card-text">Sueldo: {{ job.salary }}</p>
+        <p class="card-text">Categoría: {{ job.category }}</p>
+        <a [routerLink]="['../info', job.idOferta]" class="btn btn-primary">Ver más</a>
+      </div>
+    </div>
+  </div>
